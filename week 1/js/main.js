@@ -29,9 +29,15 @@
     var round=1;
 
     function fight(){
+
     console.log("the fight");
+
+    alert(playerOneName+":"+playweOneHealth+"*Fight*"+playerTwoName+":"+playerTwoHealth);
+
         for (var i=0;i<10;i++){
             console.log(i);
+
+         //dmg formula Math.floor(Math.random()*(max - min) + min);
         };
     };
 
