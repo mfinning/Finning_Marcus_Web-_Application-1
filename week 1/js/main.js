@@ -7,7 +7,7 @@
 
 (function(){
 
-   console.log("it works so far");
+   console.log("Lets Fight !!!");
 
 
     //players
@@ -26,18 +26,16 @@
 
     //counter
 
-    var round=1;
+    var round=0;
 
     function fight(){
 
-    console.log("the fight");
+    //console.log("the fight");
+    alert(playerOneName+":"+playerOneHealth+" * Fight * "+playerTwoName+":"+playerTwoHealth);
 
-    alert(playerOneName+":"+playerOneHealth+"*Fight*"+playerTwoName+":"+playerTwoHealth);
-
-        for (var i=0;i<10;i++){
-
-
-         //dmg formula Math.floor(Math.random()*(max - min) + min);
+        for (var i=0;i<10;i++)
+        {
+      //dmg formula Math.floor(Math.random()*(max - min) + min);
             var minDamage1 = player1Damage *.5;
             var minDamage2 = player2Damage *.5;
             var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
@@ -50,8 +48,21 @@
             playerOneHealth-=f1;
             playerTwoHealth-=f2;
 
-            console.log(playerOneHealth);
-            console.log(playerTwoHealth);
+            //console.log(playerOneHealth);
+            //console.log(playerTwoHealth);
+
+            console.log(playerOneName+":"+playerOneHealth+" "+playerTwoName+":"+playerTwoHealth);
+
+            var result = winnerCheck();
+            console.log(result);
+            if (result ==="no winner")
+            {
+                round++;
+                alert(playerOneName+":"+playerOneHealth+" *ROUND "+round+" OVER"+"* "+playerTwoName+":"+playerTwoHealth);
+            } else{
+                alert(result);
+                break;
+            }
 
 
         };
@@ -60,8 +71,21 @@
     //winchk
 
     function winnerCheck(){
+        //console.log("the winner checkFN")
+        var result="no winner";
+        console.log(result);
 
-    };
+        if(playerOneHealth<1 && playerTwoHealth<1)
+        {
+            result = "no survivers";
+          }else if(playerOneHealth<1){
+            result = playerTwoName+" is The Chapinon"
+          }else if(playerTwoHealth<1)
+        {
+            result = playerOneName+" is The Chapinon"
+        }
+        return result;
+       };
 
 // start
     console.log("program start");
