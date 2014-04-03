@@ -13,7 +13,7 @@
     //players
 
     var playerOneName = "Hawkeye";
-    var playerTwoName = "Captenamrica";
+    var playerTwoName = "CaptenAmrica";
 
     //DMG
     var player1Damage = 20;
@@ -62,7 +62,7 @@
             } else{
                 alert(result);
                 break;
-            }
+            };
 
 
         };
