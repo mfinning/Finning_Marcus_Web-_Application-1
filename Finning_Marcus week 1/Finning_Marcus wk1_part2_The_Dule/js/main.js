@@ -18,10 +18,7 @@
     //DMG
     //var player1Damage = 20;
     //var player2Damage = 20;
-
-    //life
-
-   // var playerOneHealth = 100;
+    // var playerOneHealth = 100;
     //var playerTwoHealth = 100;
 
     //counter
@@ -51,7 +48,7 @@
             //console.log(playerOneHealth);
             //console.log(playerTwoHealth);
 
-            console.log(fighter1+":"+fighter1+" "+fighter2+":"+fighter2);
+            console.log(fighter1+":"+fighter2+" "+fighter2+":"+fighter1);
 
             var result = winnerCheck();
             console.log(result);
