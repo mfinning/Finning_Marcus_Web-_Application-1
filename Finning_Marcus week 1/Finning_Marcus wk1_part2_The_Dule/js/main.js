@@ -1,7 +1,7 @@
 /**
  * Created by Marcus Finning on 4/2/14.
  * week 1
- * The Dual part 2
+ * The Dual
  */
 //self exc/
 
@@ -10,21 +10,19 @@
    console.log("Lets Fight !!!");
 
 
-    //players 1
+    //players
 
-    var Villin = ["Hawkeye", 20,100];
-
-    //player 2
-    var Hero = ["CaptenAmrica",20,100];
+    var playerOneName = "Hawkeye";
+    var playerTwoName = "CaptenAmrica";
 
     //DMG
-    //var VillinDamage = 20;
-    //var HeroDamage = 20;
+    var player1Damage = 20;
+    var player2Damage = 20;
 
     //life
 
-    //var playerOneHealth = 100;
-    //var playerTwoHealth = 100;
+    var playerOneHealth = 100;
+    var playerTwoHealth = 100;
 
     //counter
 
@@ -32,35 +30,35 @@
 
     function fight(){
 
-    console.log("the fight");
-    alert(Villin+":"+Villin+" * Fight * "+Hero+":"+Hero);
+    //console.log("the fight");
+    alert(playerOneName+":"+playerOneHealth+" * Fight * "+playerTwoName+":"+playerTwoHealth);
 
         for (var i=0;i<10;i++)
         {
       //dmg formula Math.floor(Math.random()*(max - min) + min);
-            var minDamage1 = Villin *.5;
-            var minDamage2 = Hero *.5;
-            var f1 = Math.floor(Math.random()*(Villin-minDamage1)+minDamage1);
-            var f2 = Math.floor(Math.random()*(Hero-minDamage2)+minDamage2);
+            var minDamage1 = player1Damage *.5;
+            var minDamage2 = player2Damage *.5;
+            var f1 = Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
+            var f2 = Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
 
             //console.log(f1);
             //console.log(f2);
 
             //dmg inflicted
-            VillinHealth-=f1;
-            HeroHealth-=f2;
+            playerOneHealth-=f1;
+            playerTwoHealth-=f2;
 
             //console.log(playerOneHealth);
             //console.log(playerTwoHealth);
 
-            //console.log(Villin+":"VillinHealth+" "+Hero+":"+HeroHealth);
+            console.log(playerOneName+":"+playerOneHealth+" "+playerTwoName+":"+playerTwoHealth);
 
             var result = winnerCheck();
             console.log(result);
             if (result ==="no winner")
             {
                 round++;
-                alert(Villin+":"+VillinHealth+" *ROUND "+round+" OVER"+"* "+Hero+":"+HeroHealth);
+                alert(playerOneName+":"+playerOneHealth+" *ROUND "+round+" OVER"+"* "+playerTwoName+":"+playerTwoHealth);
             } else{
                 alert(result);
                 break;
@@ -77,14 +75,14 @@
         var result="no winner";
         console.log(result);
 
-        if(VillinHealth<1 && HeroHealth<1)
+        if(playerOneHealth<1 && playerTwoHealth<1)
         {
             result = "no survivers";
-          }else if(VillinHealth<1){
-            result = Hero+" is The Chapinon"
-          }else if(HeroHealth<1)
+          }else if(playerOneHealth<1){
+            result = playerTwoName+" is The Chapinon"
+          }else if(playerTwoHealth<1)
         {
-            result = Villin+" is The Chapinon"
+            result = playerOneName+" is The Chapinon"
         }
         return result;
        };
