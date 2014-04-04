@@ -21,8 +21,8 @@
 
     //life
 
-   //var playerOneHealth = 100;
-   //var playerTwoHealth = 100;
+   var playerOneHealth = 100;
+   var playerTwoHealth = 100;
 
     //counter
 
@@ -45,13 +45,13 @@
             //console.log(f2);
 
             //dmg inflicted
-            f1=-100;
-            f2=-100;
+            playerOneHealth-=f1;
+            playerTwoHealth-=f2;
 
            // console.log(playerOneHealth);
            // console.log(playerTwoHealth);
 
-            console.log(villin+":"+f1+" "+hero+":"+f2);
+            console.log(villin+":"+playerOneHealth+" "+hero+":"+playerTwoHealth);
 
             var result = winnerCheck();
             console.log(result);
@@ -75,12 +75,12 @@
         var result="no winner";
        // console.log(result);
 
-        if(1<f1 && f2<1)
+        if(playerOneHealth<1 && playerTwoHealth<1)
         {
             result = "no survivers";
-          }else if(f1<1){
+          }else if(playerOneHealth<1){
             result = hero+" is The Chapinon"
-          }else if(f2<1)
+          }else if(playerTwoHealth<1)
         {
             result = villin+" is The Chapinon"
         }
