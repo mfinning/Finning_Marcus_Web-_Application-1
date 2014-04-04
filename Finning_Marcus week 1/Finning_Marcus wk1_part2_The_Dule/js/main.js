@@ -12,7 +12,8 @@
 
     //players 1
 
-    var Villin = ["Hawkeye", 20, 100];
+    var Villin = ["Hawkeye", 20,100];
+
     //player 2
     var Hero = ["CaptenAmrica",20,100];
 
