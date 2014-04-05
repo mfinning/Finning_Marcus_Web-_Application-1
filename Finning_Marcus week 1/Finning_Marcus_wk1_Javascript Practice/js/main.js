@@ -48,14 +48,37 @@
     console.log("1. avg of an array of numbers");
     var avgNumbers = function(arr){
 
+        a = new Array(50);
+        var x, sum;
+        sum = 0;
+        for (x=0; x <= 49; x++)
+        {
+            a[x] = x;
+            sum = sum + a[x];
+        }
+        avg = sum / 50;
+        console.log("The average is "+avg+"<br>");
+
+
+    }
+
 
 
     //--------------------------------------------------------
     console.log("2. concat first and last name");
 
-        //PUT FUNCTION HERE
+    array1 = new Array(5);
+    array1[0] = "James";
+    array1[1] = "Bond";
+    array1[2] = "0";
+    array1[3] = "0";
+    array1[4] = "7";
+    x = array1.join(' ');
+    console.log(x);
 
-    console.log(fullName('James', 'Bond'));
+
+
+
 
     //--------------------------------------------------------
     console.log("3. word count");
