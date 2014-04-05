@@ -48,29 +48,7 @@
     console.log("1. avg of an array of numbers");
     var avgNumbers = function(arr){
 
-        scores = new Array(4)
 
-        scores [0] = form.mark1.value
-        scores [0] = new Number(scores[0])
-        scores [1] = form.mark2.value
-        scores [1] = new Number(scores[1])
-        scores [2] = form.mark3.value
-        scores [2] = new Number(scores[2])
-        scores [3] = form.mark4.value
-        scores [3] = new Number(scores[3])
-
-
-        var Sum = 0
-        var average
-
-        for(var x = 0; x < scores.length; x ++)
-        {
-            Sum = Sum + scores[x]
-            average = Sum / scores[x]
-        }
-    };
-
-    console.log('avg number = ', avgNumbers([1,2,3,4,5]));
 
     //--------------------------------------------------------
     console.log("2. concat first and last name");
