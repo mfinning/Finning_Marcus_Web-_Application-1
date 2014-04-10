@@ -63,16 +63,10 @@
     //--------------------------------------------------------
     console.log("2. concat first and last name");
 
-    array1 = new Array(5);
-    array1[0] = "James";
-    array1[1] = "Bond";
-    array1[2] = "0";
-    array1[3] = "0";
-    array1[4] = "7";
-    x = array1.join(' ');
-    console.log(x);
-
-
+   var fullName = function(firstName, LastName){
+       return firstName + ' '+ LastName;
+   };
+    console.log(fullName('James', 'Bond'));
 
 
 
@@ -80,7 +74,9 @@
     console.log("3. word count");
     var ipsum = "this is test text that is being used as input to a function"
 
-        //PUT FUNCTION HERE
+       var wordCount = function(blob) {
+           return blob.split(' ').length;
+       };
 
     console.log(wordCount(ipsum));
 
