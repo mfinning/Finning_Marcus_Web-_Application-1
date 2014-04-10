@@ -21,8 +21,8 @@
 
     //life
 
-   var playerOneHealth = 100;
-   var playerTwoHealth = 100;
+   //var playerOneHealth = 100;
+   //var playerTwoHealth = 100;
 
     //counter
 
@@ -31,34 +31,34 @@
     function fight(){
 
     //console.log("the fight");
-    alert(villin+":"+100+" * Fight * "+hero+":"+100);
+    alert(villin[0]+":"+villin[2]+" * Fight * "+hero[0]+":"+hero[2]);
 
         for (var i=0;i<10;i++)
         {
       //dmg formula Math.floor(Math.random()*(max - min) + min);
-            var minDamage1 = 10;
-            var minDamage2 = 10;
-            var f1 = Math.floor(Math.random()*(20-minDamage1)+minDamage1);
-            var f2 = Math.floor(Math.random()*(20-minDamage2)+minDamage2);
+            var minDamage1 = villin[1] * .5;
+            var minDamage2 = hero[1] * .5;
+            var f1 = Math.floor(Math.random()*(villin[1]-minDamage1)+minDamage1);
+            var f2 = Math.floor(Math.random()*(hero[1]-minDamage2)+minDamage2);
 
            // console.log(f1);
             //console.log(f2);
 
             //dmg inflicted
-            playerOneHealth-=f1;
-            playerTwoHealth-=f2;
+            villin[2]-=f1;
+            hero[2]-=f2;
 
            // console.log(playerOneHealth);
            // console.log(playerTwoHealth);
 
-            console.log(villin+":"+playerOneHealth+" "+hero+":"+playerTwoHealth);
+            console.log(villin[2]+" "+hero[2]);
 
             var result = winnerCheck();
             console.log(result);
             if (result ==="no winner")
             {
                 round++;
-                alert(villin+":"+playerOneHealth+" *ROUND "+round+" OVER"+"* "+hero+":"+playerTwoHealth);
+                alert(villin[0]+":"+villin[2]+" *ROUND "+round+" OVER"+"* "+hero[0]+":"+hero[2]);
             } else{
                 alert(result);
                 break;
@@ -75,14 +75,14 @@
         var result="no winner";
        // console.log(result);
 
-        if(playerOneHealth<1 && playerTwoHealth<1)
+        if(villin[2]<1 && hero[2]<1)
         {
             result = "no survivers";
-          }else if(playerOneHealth<1){
-            result = hero+" is The Chapinon"
-          }else if(playerTwoHealth<1)
+          }else if(villin[2]<1){
+            result = hero[0]+" is The Chapinon"
+          }else if(hero[2]<1)
         {
-            result = villin+" is The Chapinon"
+            result = villin[0]+" is The Chapinon"
         }
         return result;
        };
