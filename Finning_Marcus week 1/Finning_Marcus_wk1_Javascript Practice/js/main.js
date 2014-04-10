@@ -92,9 +92,23 @@
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
 
-        //PUT FUNCTION HERE
+        var vowelsInWord = function(word) {        //call set up
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+            count = 0;
+            this.word = word.toLocaleLowerCase().split(''); //changes all to lower case and shorts out letters
 
-    console.log(vowelsInWord('JavaScript'));
+            for(var i= 0, j=this.word.length; i<j; i++) { //loops thrue letters
+                for(var ii= 0,jj=vowels.length; ii<jj; ii++){
+                    if(this.word[i] === vowels[ii]){
+                        count++;
+                    }
+                }
+
+            }
+            return count;
+        }
+
+    console.log(vowelsInWord('JavaScriptRules'));
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
