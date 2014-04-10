@@ -84,7 +84,7 @@
     console.log("4. sentence char count");
 
        var charCount = function(blob){    //calling/setup
-           return blob.split(' ').length; //couting
+           return blob.split('').length; //couting
        };
 
     console.log(charCount(ipsum));  //posting results
