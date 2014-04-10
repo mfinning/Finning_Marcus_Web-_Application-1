@@ -108,13 +108,32 @@
             return count;
         }
 
-    console.log(vowelsInWord('JavaScriptRules'));
+    console.log(vowelsInWord('JavaScriptRules'));  //results
 
     //--------------------------------------------------------
     console.log("6. find number and create an array of even or odd numbers");
 
-        //PUT FUNCTION HERE
+       var findNum = function(arr, even){
+           var returnArr = [],
+               value;
 
+           if(even === undefined || even){
+               for(var i=0, j=arr.length; i<j; i++){
+                   value = arr[i];
+                   if(value%2 === 0){
+                       returnArr.push(value);
+                   };
+               };
+           }else{
+                for(var i=0, j=arr.length; i<j; i++){
+                       value= arr[i];
+                       if(value%2 !== 0){
+                           returnArr.push(value);
+               };
+           };
+       };
+           return returnArr;
+       };
     console.log(findNum([31,22,4,67,83,6,5,4]));
     console.log(findNum([31,22,4,67,83,6,5,4], false));
 
