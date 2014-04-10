@@ -46,21 +46,17 @@
     console.log('------ Goal2: Assignment: JavaScript Practice ----------');
 
     console.log("1. avg of an array of numbers");
-    var avgNumbers = function(arr){
 
-        a = new Array(50);
-        var x, sum;
-        sum = 0;
-        for (x=0; x <= 49; x++)
-        {
-            a[x] = x;
-            sum = sum + a[x];
-        }
-        avg = sum / 50;
-        console.log("The average is "+avg+"<br>");
+    var avgNumber = function(myarray){
+        var avg = 0;
+        for(var i= 0, j=myarray.length;i<j; i++){
+            avg += myarray[i];
+        };
+        avg/= myarray .length;
+        return avg;
 
-
-    }
+    };
+     console.log('avg number = ', avgNumber([1,2,4,8,20,30,40,60]));
 
 
 
