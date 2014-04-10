@@ -74,18 +74,20 @@
     console.log("3. word count");
     var ipsum = "this is test text that is being used as input to a function"
 
-       var wordCount = function(blob) {
-           return blob.split(' ').length;
+       var wordCount = function(blob) { //calling/set up
+           return blob.split(' ').length; counting
        };
 
-    console.log(wordCount(ipsum));
+    console.log(wordCount(ipsum)); //posting results
 
     //--------------------------------------------------------
     console.log("4. sentence char count");
 
-        //PUT FUNCTION HERE
+       var charCount = function(blob){    //calling/setup
+           return blob.split(' ').length; //couting
+       };
 
-    console.log(charCount(ipsum));
+    console.log(charCount(ipsum));  //posting results
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
