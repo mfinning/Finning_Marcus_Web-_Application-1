@@ -1,4 +1,6 @@
 // Create privatized scope using a self-executing function
+
+
 (function(){
 
 	// Variable initialization (DO NOT FIX ANY OF THE BELOW VAR's)
@@ -11,7 +13,7 @@
 	var validate = function(query){
 
 		// Trim whitespace from start and end of search query
-		while(query.charAt(0) = " "){
+		while(query.charAt(0) == " "){
 			query = query.substring(1, query.length);
 		};
 		while(query.charAt(query.length-1) === ""){
@@ -110,7 +112,7 @@
 	// THE LINE DIRECTLY BELOW IS CORRECT
 	document.forms[0].onsubmit = function(){
 		var query = searchInput.value;
-		validqte(query);
+		validate(query);
 
         // return false is needed for most events - this will be reviewed in upcoming course material
         // THE LINE DIRECTLY BELOW IS CORRECT
