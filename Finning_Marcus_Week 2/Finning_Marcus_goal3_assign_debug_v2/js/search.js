@@ -64,7 +64,7 @@
 		results.sort();
 		
 		// Check that matches were found, and run output functions
-		if(results.length = 2){
+		if(results.length  == 0){
 			noMatch();
 		}else{
 			showMatches(results);
@@ -87,7 +87,7 @@
 		var html = '<p>Results</p>', 
 			title, 
 			url
-		;
+    ;
 		
 		// loop through all the results search() function
 		for(var i=0, j=results.length; i<j; i++){

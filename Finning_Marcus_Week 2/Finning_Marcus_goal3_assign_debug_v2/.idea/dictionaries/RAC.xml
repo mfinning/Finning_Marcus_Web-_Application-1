@@ -2,8 +2,12 @@
   <dictionary name="RAC">
     <words>
       <w>dbitem</w>
+      <w>headsub</w>
+      <w>logowrap</w>
       <w>onsubmit</w>
       <w>qitem</w>
+      <w>searchwrap</w>
+      <w>sitewrap</w>
       <w>var's</w>
     </words>
   </dictionary>
