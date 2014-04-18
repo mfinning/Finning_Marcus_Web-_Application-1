@@ -10,8 +10,38 @@
    console.log("Lets Fight !!!");
 
 //dom defined
-    var villin_text = document.querySelector("#villin").querySelector("p");
-    var hero_text = document.querySelector("#hero").querySelector("p");
+    var fighter1_text = document.querySelector("#villin").querySelector("p");//query select fighter 1
+    var fighter2_text = document.querySelector("#hero").querySelector("p");// query select fighter 2
+    var round_txt = document.querySelector("h4");       //round indacater
+    var buttion = document.getElementById("fight_btn"); //buttion selelct
+
+    console.log()
+
+    // click event setup
+    buttion.addEventListener("click", fight, false);
+
+    //fighter array
+    var fighters =[
+        {
+            name:"Hawkeye",
+            damage:20,
+            health:100
+            },
+        {
+            name:CaptenAmrica,
+            damage:20,
+            health:100
+        }];
+    var round = 1;
+
+    //dom start for html inner
+    round_txt.innerHTML="Click To Start The Fight";
+    fighter1_text.innerHTML = fighters[0].name + ":" + fighters[0].health;
+    fighter2_text.innerHTML = fighters[1].name + ":" + fighters[1].health;
+
+
+
+
     //players
 
     var villin = ["Hawkeye",20,100];
