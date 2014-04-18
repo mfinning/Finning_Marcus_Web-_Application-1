@@ -21,12 +21,12 @@
     buttion.addEventListener("click", fight, false);
 
     //fighter array
-    var fighters =[
+    var fighters = [
         {
             name:"Hawkeye",
             damage:20,
             health:100
-            },
+        },
         {
             name:"CaptenAmrica",
             damage:20,
@@ -36,33 +36,33 @@
 
     //dom start for html inner
     round_txt.innerHTML="Click To Start The Fight";
-    fighter1_text.innerHTML = fighters[0].name + ":" + fighters[2].health;
-    fighter2_text.innerHTML = fighters[0].name + ":" + fighters[2].health;
+    fighter1_text.innerHTML = fighters[0].name + ":" + fighters[0].health;
+    fighter2_text.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
-
+            //fight function
 
     function fight(){
 
     //console.log("the fight");
    // alert(villin[0]+":"+villin[2]+" * Fight * "+hero[0]+":"+hero[2]);
 
+            //dom fight
+        fighter1_text.innerHTML = fighters[0].name + ":" + fighters[0].health;
+        fighter2_text.innerHTML = fighters[1].name + ":" + fighters[1].health;
 
-        fighter1_text.innerHTML = fighters[0].name + ":" + fighters[2].health;
-        fighter2_text.innerHTML = fighters[0].name + ":" + fighters[2].health;
 
-        //for (var i=0;i<10;i++)
 
       //dmg formula Math.floor(Math.random()*(max - min) + min);
 
-            var f1 = Math.floor(Math.random() * (fighters[1].damage + fighters[1].damage * .5);
-            var f2 = Math.floor(Math.random() * (fighters[1].damage + fighters[1].damage * .5);
+            var f1 = Math.floor(Math.random() * (fighters[0].damage + fighters[0].damage * .5)
+            var f2 = Math.floor(Math.random() * (fighters[1].damage + fighters[1].damage * .5)
 
            // console.log(f1);
             //console.log(f2);
 
             //dmg inflicted
-            fighters[2].health -= f1;
-            fighters[2]. health -= f2;
+            fighters[0].health -= f1;
+            fighters[1]. health -= f2;
 
            // console.log(playerOneHealth);
            // console.log(playerTwoHealth);
@@ -110,7 +110,7 @@
             result = fighters[0].name +" is The Chapinon"
         }
         return result;
-       };
+       }
 
 // start
     console.log("program start");
